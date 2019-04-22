@@ -1,5 +1,3 @@
-The official source code for _Django for Professionals_. 
+The official source code for [Django for Professionals](https://djangoforprofessionals.com/). Coming soon.
 
-Note this book is no longer available for preorder. To be notified when the full book is available [sign up for my newsletter](https://wsvincent.com/newsletter/).
-
-![Cover](cover.jpg)
+![Cover](cover_300.jpg)
