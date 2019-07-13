@@ -1,3 +1,4 @@
+# Pull base image
 FROM python:3.7-slim
 
 # Set environment varibles
