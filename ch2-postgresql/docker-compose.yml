@@ -1,8 +1,6 @@
 version: '3.7'
 
 services:
-  db:
-    image: postgres:10
   web:
     build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
@@ -12,3 +10,5 @@ services:
       - 8000:8000
     depends_on:
       - db
+  db:
+    image: postgres:11
