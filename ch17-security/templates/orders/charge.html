@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+
+{% block title %}Charge{% endblock title %}
+
+{% block content %}
+<h2>Thank you for your order! You now have access to
+<a href="{% url 'book_list' %}">All Books</a>.</h2>
+{% endblock content %}
