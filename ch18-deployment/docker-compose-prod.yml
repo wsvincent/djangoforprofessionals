@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    command: gunicorn bookstore_project.wsgi -b 0.0.0.0:8000
+    environment:
+      - ENVIRONMENT=production
+      - SECRET_KEY=p_o3vp1rg5)t^lxm9-43%0)s-=1qpeq%o7gfq+e4#*!t+_ev82
+      - DEBUG=0
+      - STRIPE_TEST_PUBLISHABLE_KEY=<pk_test_your_publishable_key_here>
+      - STRIPE_TEST_SECRET_KEY=<sk_test_your_secret_key_here>
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: postgres:11
