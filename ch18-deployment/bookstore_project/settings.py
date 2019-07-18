@@ -189,6 +189,10 @@ DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 STRIPE_TEST_PUBLISHABLE_KEY=os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY')
 STRIPE_TEST_SECRET_KEY=os.environ.get('STRIPE_TEST_SECRET_KEY')
 
+STRIPE_LIVE_PUBLISHABLE_KEY=os.environ.get('STRIPE_LIVE_PUBLISHABLE_KEY')
+STRIPE_LIVE_SECRET_KEY=os.environ.get('STRIPE_LIVE_SECRET_KEY')
+
+
 # django-debug-toolbar
 import socket
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
@@ -205,6 +209,7 @@ if ENVIRONMENT == 'production':
     SECURE_CONTENT_TYPE_NOSNIFF = True
     SESSION_COOKIE_SECURE = True 
     CSRF_COOKIE_SECURE = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Heroku
 import dj_database_url
