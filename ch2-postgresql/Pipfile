@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 django = "==2.2.3"
-psycopg2-binary = "==2.7.7"
+psycopg2-binary = "==2.8.3"
 
 [requires]
 python_version = "3.7"
