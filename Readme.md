@@ -1,3 +1,3 @@
-The official source code for [Django for Professionals](https://djangoforprofessionals.com/). Coming soon.
+The official source code for [Django for Professionals](https://djangoforprofessionals.com/).
 
-![Cover](cover_300.jpg)
+[![Cover](cover_300.jpg)](https://djangoforprofessionals.com)
