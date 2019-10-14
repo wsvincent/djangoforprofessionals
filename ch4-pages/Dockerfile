@@ -1,7 +1,7 @@
 # Pull base image
 FROM python:3.7-slim
 
-# Set environment varibles
+# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
