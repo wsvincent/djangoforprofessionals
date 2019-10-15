@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8c609ef7dd42ac3d7f94a5abec11f8606b00a50fef6d05f73628dc0d1c71598a"
+            "sha256": "14459580d9907ebc969a3ae9d400815d4e9161b18a4aaa668f8503179783231f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,11 +26,11 @@
         },
         "django-crispy-forms": {
             "hashes": [
-                "sha256:5ecb13b19f867f45f5120d7e869de0ede19fa04555b04c8a7f7bbac14d739e50",
-                "sha256:fda07e532835faae1de96aad47faa0cc29bdd6ff2464a475d035fdb9b58e2fa4"
+                "sha256:5952bab971110d0b86c278132dae0aa095beee8f723e625c3d3fa28888f1675f",
+                "sha256:705ededc554ad8736157c666681165fe22ead2dec0d5446d65fc9dd976a5a876"
             ],
             "index": "pypi",
-            "version": "==1.7.1"
+            "version": "==1.7.2"
         },
         "psycopg2-binary": {
             "hashes": [
@@ -68,10 +68,10 @@
         },
         "pytz": {
             "hashes": [
-                "sha256:303879e36b721603cc54604edcac9d20401bdbe31e1e4fdee5b9f98d5d31dfda",
-                "sha256:d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141"
+                "sha256:1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d",
+                "sha256:b02c06db6cf09c12dd25137e563b31700d3b80fcc4ad23abb7a315f2789819be"
             ],
-            "version": "==2019.1"
+            "version": "==2019.3"
         },
         "sqlparse": {
             "hashes": [

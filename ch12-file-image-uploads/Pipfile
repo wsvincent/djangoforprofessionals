@@ -7,10 +7,10 @@ verify_ssl = true
 
 [packages]
 django = "==2.2.3"
-django-crispy-forms = "==1.7.1"
 django-allauth = "==0.38.0"
 pillow = "==5.4.1"
 psycopg2-binary = "==2.8.3"
+django-crispy-forms = "==1.7.2"
 
 [requires]
 python_version = "3.7"
