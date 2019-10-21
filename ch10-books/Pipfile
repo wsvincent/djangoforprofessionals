@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==2.2.3"
+django = "==2.2.4"
 django-allauth = "==0.38.0"
 psycopg2-binary = "==2.8.3"
 django-crispy-forms = "==1.7.2"
