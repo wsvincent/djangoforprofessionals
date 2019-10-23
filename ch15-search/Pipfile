@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 django = "==2.2.6"
 django-allauth = "==0.40.0"
-pillow = "==5.4.1"
+pillow = "==6.2.0"
 stripe = "==2.32.0"
 psycopg2-binary = "==2.8.4"
 django-crispy-forms = "==1.7.2"
