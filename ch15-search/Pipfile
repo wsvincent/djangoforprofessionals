@@ -6,12 +6,12 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==2.2.6"
-django-allauth = "==0.40.0"
+django = "==3.0.1"
+django-allauth = "==0.41.0"
 pillow = "==6.2.1"
-stripe = "==2.32.0"
+stripe = "==2.41.0"
 psycopg2-binary = "==2.8.4"
-django-crispy-forms = "==1.7.2"
+django-crispy-forms = "==1.8.1"
 
 [requires]
 python_version = "3.7"
