@@ -182,8 +182,6 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 # production
 if ENVIRONMENT == 'production':
-    SECURE_BROWSER_XSS_FILTER = True
-    X_FRAME_OPTIONS = 'DENY'
     SECURE_SSL_REDIRECT = True
     SECURE_HSTS_SECONDS = 3600
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
