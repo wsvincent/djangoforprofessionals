@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==3.0.1"
+django = "==3.0.7"
 django-allauth = "==0.41.0"
 pillow = "==6.2.1"
 psycopg2-binary = "==2.8.4"
