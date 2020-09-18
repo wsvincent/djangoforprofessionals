@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Bookstore{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4
+     mb-3 bg-white border-bottom shadow-sm">
+      <a href="{% url 'home' %}" class="navbar-brand my-0 mr-md-auto
+      font-weight-normal">Bookstore</a>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="{% url 'about' %}">About</a>
+        {% if user.is_authenticated %}
+          <a class="p-2 text-dark" href="{% url 'account_logout' %}">Log Out</a>
+        {% else %}
+          <a class="p-2 text-dark" href="{% url 'account_login' %}">Log In</a>
+          <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Sign Up</a>
+  {% endif %}
+</nav>
+    </div>
+  </header>
+  <div class="container">
+    {% block content %}
+    {% endblock content %}
+  </div>
+  <!-- JavaScript -->
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+</body>
+</html>
