@@ -11,7 +11,7 @@ psycopg2-binary = "==2.8.5"
 django-crispy-forms = "==1.9.2"
 django-allauth = "==0.42.0"
 environs = {extras = ["django"], version = "==8.0.0"}
-pillow = "==7.2.0"
+pillow = "==9.0.1"
 django-debug-toolbar = "==2.2"
 whitenoise = "==5.1.0"
 gunicorn = "==20.0.4"
