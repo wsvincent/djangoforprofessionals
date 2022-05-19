@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+{% block title %}{{ book.title }}{% endblock title %}
+
+{% block content %}
+  <div class="book-detail">
+    {% if book.cover %}
+      <img class="bookcover" src="{{ book.cover.url}}" alt="{{ book.title }}">
+    {% endif %}
+    <h2><a href="">{{ book.title }}</a></h2>
+    <p>Author: {{ book.author }}</p>
+    <p>Price: {{ book.price }}</p>
+    <div>
+      <h3>Reviews</h3>
+      <ul>
+        {% for review in book.reviews.all %}
+        <li>{{ review.review }} ({{ review.author }})</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock content %}
