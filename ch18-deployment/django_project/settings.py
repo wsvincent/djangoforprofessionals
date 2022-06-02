@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from environs import Env  
+from environs import Env
 
-env = Env()  
-env.read_env()  
+env = Env()
+env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,8 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DJANGO_DEBUG", default=False)  
-ALLOWED_HOSTS = ["mysterious-hollows-62532.herokuapp.com", "localhost", "127.0.0.1"]  
+DEBUG = env.bool("DJANGO_DEBUG", default=False)
+ALLOWED_HOSTS = ["mysterious-hollows-62532.herokuapp.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -41,21 +41,21 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "whitenoise.runserver_nostatic",  # new
     "django.contrib.staticfiles",
-    "django.contrib.sites",  
+    "django.contrib.sites",
     # Third-party
-    "crispy_forms",  
-    "crispy_bootstrap5",  
-    "allauth",  
-    "allauth.account",  
-    "debug_toolbar",  
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "allauth",
+    "allauth.account",
+    "debug_toolbar",
     # Local
-    "accounts.apps.AccountsConfig",  
-    "pages.apps.PagesConfig",  
-    "books.apps.BooksConfig",  
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
+    "books.apps.BooksConfig",
 ]
 
 MIDDLEWARE = [
-    "django.middleware.cache.UpdateCacheMiddleware", 
+    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",  # new
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -64,8 +64,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",  
-    "django.middleware.cache.FetchFromCacheMiddleware",  
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
 ]
 
 ROOT_URLCONF = "django_project.urls"
@@ -73,7 +73,7 @@ ROOT_URLCONF = "django_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],  
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -93,8 +93,7 @@ WSGI_APPLICATION = "django_project.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL",
-    default="postgres://postgres@db/postgres")
+    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
 }
 
 
@@ -133,12 +132,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]  
-STATIC_ROOT = BASE_DIR / "staticfiles" 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"  
+STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
-MEDIA_URL = "/media/"  
-MEDIA_ROOT = BASE_DIR / "static" 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -176,12 +175,14 @@ hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 CACHE_MIDDLEWARE_ALIAS = "default"
-CACHE_MIDDLEWARE_SECONDS = 604800 			
+CACHE_MIDDLEWARE_SECONDS = 604800
 CACHE_MIDDLEWARE_KEY_PREFIX = ""
 
 SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 SECURE_HSTS_SECONDS = env.int("DJANGO_SECURE_HSTS_SECONDS", default=2592000)  # 30 days
-SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool("DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool(
+    "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True
+)
 SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)

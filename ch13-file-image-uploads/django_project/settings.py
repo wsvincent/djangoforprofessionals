@@ -87,8 +87,7 @@ WSGI_APPLICATION = "django_project.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL",
-    default="postgres://postgres@db/postgres")
+    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
 }
 
 
@@ -132,7 +131,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # new
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"  # new
 
 MEDIA_URL = "/media/"  # new
-MEDIA_ROOT = BASE_DIR / "static"  # new
+MEDIA_ROOT = BASE_DIR / "media"  # new
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -162,4 +161,3 @@ ACCOUNT_EMAIL_REQUIRED = True  # new
 ACCOUNT_UNIQUE_EMAIL = True  # new
 
 DEFAULT_FROM_EMAIL = "admin@djangobookstore.com"  # new
-
